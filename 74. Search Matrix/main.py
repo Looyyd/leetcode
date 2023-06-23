@@ -12,9 +12,9 @@ class Solution(object):
         right = n*m - 1
 
         while 1:
-            middle = (right + left )/2
+            middle = (right + left )//2
 
-            row , col = middle//m , middle%n
+            row , col = middle//n , middle%n
             value_middle = matrix[row][col]
 
             if value_middle == target:
@@ -23,7 +23,7 @@ class Solution(object):
             # exchausted search:
             if middle == left:
                 # if right = left + 1, right could be the target
-                row, col = right// m, right% n
+                row, col = right// n, right% n
                 if matrix[row][col] == target:
                     return True
                 else:
@@ -33,3 +33,9 @@ class Solution(object):
                 left = middle
             else:
                 right = middle
+
+
+matrix = [[1,1]]
+
+s = Solution()
+print(s.searchMatrix(matrix, 0))
