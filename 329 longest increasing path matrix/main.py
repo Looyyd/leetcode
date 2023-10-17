@@ -30,7 +30,7 @@ class Solution:
         return ans
 
 
-    def longestIncreasingPath2(matrix: List[List[int]]) -> int:
+    def longestIncreasingPath2(self, matrix: List[List[int]]) -> int:
         #dp solution
         if not matrix:
             return 0
